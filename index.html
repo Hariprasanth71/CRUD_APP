@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="path-to-css-file"/> -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            padding: 3rem;
+            color: white;
+            /* background: linear-gradient(to bottom, rgb(37, 156, 45), black); */
+        }
+
+        html {
+            height: 100%;
+            /* background: linear-gradient(to bottom, aqua, black); */
+            /* background: linear-gradient(to top, #2f3545, #1d212c); */
+            background-color: #151820;
+            width: 100%;
+        }
+
+        .Header {
+            text-align: center;
+        }
+
+        .Datas input {
+            outline: none;
+            border: none;
+        }
+
+        h2 {
+            margin-bottom: 15px;
+        }
+
+        .Add-input {
+            width: 23%;
+            display: flex;
+            font-size: 17px;
+            justify-content: space-between;
+        }
+
+        .Add-input input {
+            margin-bottom: 0.5rem;
+            padding: 0.2rem;
+            color: white;
+            background: #20232e;
+            /* padding-bottom: 1rem; */
+        }
+
+        .button {
+            background-color: cadetblue;
+            color: white;
+            outline: none;
+            border: none;
+            padding: 0.5rem 1.3rem;
+        }
+        .Add-input2
+        {
+            width: 25%;
+            display: flex;
+            font-size: 17px;
+            justify-content: space-between;
+        }
+        .Add-input2 input{
+            margin-bottom: 0.5rem;
+            padding: 0.25rem;
+            color: white;
+            background: #20232e;
+        }
+        .indivi-item input {
+            outline: none;
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="Header">
+        <h1>CRUD Application</h1>
+    </div>
+
+    <div class="Datas">
+        <h2>Add User</h2>
+        <form action="/adduser" method="post">
+            <div class="Add-input">
+                <label>User ID : </label>
+                <input type="text" id="userid" name="userid" size="30" placeholder="User ID">
+            </div>
+
+            <div class="Add-input">
+                <div>Name : </div>
+                <div><input type="text" id="username" name="username" size="30" placeholder="Name"></div>
+            </div>
+
+            <div class="Add-input">
+                <div>DOB : </div>
+                <div><input type="text" id="dob" name="dob" size="30" placeholder="DOB"></div>
+            </div>
+
+            <div class="Add-input">
+                <div>Profession : </div>
+                <div><input type="text" id="profession" name="profession" size="30" placeholder="Profession"></div>
+            </div>
+
+            <div class="Add-input">
+                <div>City : </div>
+                <div><input type="text" id="city" name="city" size="30" placeholder="city"></div>
+            </div>
+
+            <button type="submit" name="submit" class="button">Add User</button>
+        </form><br>
+
+        <div class="indivi-item">
+            <h2>Get Specific User Details</h2>
+            <form action="/particularUser" method="post">
+                <div class="Add-input2">
+                    <label>User ID : </label>
+                    <input type="text" id="urid" name="urid" size="30" placeholder="User ID"><br>
+                </div>
+                <button type="submit" name="submit" class="button">Get User Info</button><br>
+            </form><br>
+        </div>
+
+        <div class="indivi-item">
+            <h2>Delete User Details</h2>
+            <form action="/deleteUser" method="post">
+                <div class="Add-input2">
+                    <label>User ID : </label>
+                    <input type="text" id="uid" name="uid" size="30" placeholder="User ID"><br>
+                </div>
+                <button type="submit" name="submit" class="button">Delete User</button>
+            </form><br>
+        </div>
+    </div>
+
+    <div class="indivi-item">
+        <h2>Show All User Info</h2>
+        <form action="/showall" method="get">
+            <button type="submit" name="submit" class="button">Show All User Info</button>
+        </form>
+    </div>
+</div>
+
+</body>
+
+</html>
